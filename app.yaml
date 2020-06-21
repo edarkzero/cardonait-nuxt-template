@@ -1,5 +1,4 @@
 runtime: nodejs10
-env: 'web-app-dev'
 
 handlers:
   - url: /_nuxt
@@ -17,3 +16,5 @@ handlers:
 
 env_variables:
   HOST: '0.0.0.0'
+  GAE_ENV: 'dev'
+  GAE_SERVICE: 'web-app-dev'
