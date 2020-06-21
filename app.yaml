@@ -1,5 +1,5 @@
 runtime: nodejs10
-
+service: web-app-dev
 handlers:
   - url: /_nuxt
     static_dir: .nuxt/dist/client
@@ -13,8 +13,3 @@ handlers:
   - url: /.*
     script: auto
     secure: always
-
-env_variables:
-  HOST: '0.0.0.0'
-  GAE_ENV: 'dev'
-  GAE_SERVICE: 'web-app-dev'
