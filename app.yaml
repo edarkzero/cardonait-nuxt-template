@@ -16,3 +16,4 @@ handlers:
 
 env_variables:
   HOST: '0.0.0.0'
+  GAE_ENV: 'web-app-dev'
