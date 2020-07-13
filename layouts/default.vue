@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Menu></Menu>
+    <Menu />
     <nuxt />
   </div>
 </template>
@@ -9,8 +9,9 @@
 
 </style>
 <script>
-  import Menu from '../components/Menu'
-  export default {
-    components: { Menu }
-  }
+import Menu from "~/components/Menu"
+
+export default {
+  components: { Menu }
+}
 </script>
