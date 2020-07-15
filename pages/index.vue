@@ -12,7 +12,7 @@
           </div>
         </template>
         <template v-slot:cell(enabled)="data">
-          <b class="text-info">{{ data.value === 1 ? 'Yes' : 'No' }}</b>
+          <b class="text-info">{{ data.value ? 'Yes' : 'No' }}</b>
         </template>
         <template v-slot:cell(profile_photo_url)="data">
           <b-img :src="data.value" alt="Profile" height="40px"></b-img>
