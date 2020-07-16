@@ -4,7 +4,7 @@
       <h1>
         Users - Count:{{users.total}}
       </h1>
-      <b-table striped hover :items="users.rows" :fields="fields" :busy="users.length === 0">
+      <b-table striped hover :items="users.rows" :fields="fields" :busy="users.length === 0" stacked="sm">
         <template v-slot:table-busy>
           <div class="text-center text-black-50 my-2">
             <b-spinner class="align-middle"></b-spinner>
