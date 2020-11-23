@@ -61,7 +61,8 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxtjs/gtm'
   ],
   /*
   ** Axios module configuration
@@ -82,5 +83,8 @@ export default {
       '/users/5f0e761c0ade8a000ac324ff/delete',
       '/users/5fb485b45043eb0b70efba8e/delete'
     ]
+  },
+  gtm: {
+    id: 'GTM-MKSML52'
   }
 }
