@@ -179,6 +179,18 @@ export default {
         this.show = true
       })
     }
+  },
+  head () {
+    return {
+      title: 'Update the details for ' + this.user.name + ' to become a partner',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Update the name, mail, profile photos, and much more for ' + this.user.name + ' with this code ' + this.user.id
+        }
+      ]
+    }
   }
 }
 </script>

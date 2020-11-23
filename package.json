@@ -1,5 +1,6 @@
 {
   "name": "cardonait",
+  "description": "Listing of users using CRUD operations with Nuxt, Vue, Axios and Vuex",
   "version": "1.0.0",
   "private": true,
   "scripts": {

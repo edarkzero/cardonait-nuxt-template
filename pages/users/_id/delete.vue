@@ -41,6 +41,18 @@ export default {
       this.destroyUser([this.user.id])
       this.$router.go(-1)
     }
+  },
+  head () {
+    return {
+      title: 'Remove the details of ' + this.user.name + ' to open a slot on the crew',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Remove the name, mail, profile photos, and other info for ' + this.user.name + ' with this code ' + this.user.id
+        }
+      ]
+    }
   }
 }
 </script>

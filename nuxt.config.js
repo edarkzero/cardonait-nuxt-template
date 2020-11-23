@@ -9,7 +9,7 @@ export default {
   ** See https://nuxtjs.org/api/configuration-head
   */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Cardona IT',
     meta: [
       { charset: 'utf-8' },
       {
@@ -19,7 +19,12 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content: 'Listing of users using CRUD operations with Nuxt, Vue, Axios and Vuex'
+      },
+      {
+        hid: 'google-site-verification',
+        name: 'google-site-verification',
+        content: 'UP_efCoBo_4ed_6pZ44xTexuIpD6iHOHXk9mnvHEp5E'
       }
     ],
     link: [

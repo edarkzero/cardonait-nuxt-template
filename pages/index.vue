@@ -73,6 +73,18 @@ export default Vue.extend({
     ...mapActions([
       'fetchUsers'
     ])
+  },
+  head () {
+    return {
+      title: 'All our experts of CardonaIT are waiting',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'All our experts of CardonaIT are waiting, rigth now we are (' + this.users.total + ')'
+        }
+      ]
+    }
   }
 })
 </script>
