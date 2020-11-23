@@ -60,7 +60,9 @@ export default {
     'bootstrap-vue/nuxt',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxt/content',
+    '@nuxtjs/sitemap'
   ],
   /*
   ** Axios module configuration
@@ -71,5 +73,15 @@ export default {
   ** Build configuration
   ** See https://nuxtjs.org/api/configuration-build/
   */
-  build: {}
+  build: {},
+  sitemap: {
+    hostname: 'https://web-app-dev-dot-cardonait.uc.r.appspot.com',
+    gzip: true,
+    routes: [
+      '/users/5f0e761c0ade8a000ac324ff/edit',
+      '/users/5fb485b45043eb0b70efba8e/edit',
+      '/users/5f0e761c0ade8a000ac324ff/delete',
+      '/users/5fb485b45043eb0b70efba8e/delete'
+    ]
+  }
 }
