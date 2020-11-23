@@ -21,14 +21,17 @@
         <template v-slot:cell(enabled)="data">
           <b class="text-info">{{ data.value ? 'Yes' : 'No' }}</b>
         </template>
+        <template v-slot:cell(activated)="data">
+          <b class="text-info">{{ data.value ? 'Yes' : 'No' }}</b>
+        </template>
         <template v-slot:cell(profile_photo_url)="data">
           <b-img :src="data.value" alt="Profile" height="40px" />
         </template>
         <template #cell(actions)="row">
-          <b-btn size="sm" to="/user/detail">
+          <b-btn size="sm" :to="{name:'users-id-edit',params:{id:row.item.id}}">
             <BIconPencil>{{ row.item.id }}</BIconPencil>
           </b-btn>
-          <b-btn size="sm" to="/user/delete">
+          <b-btn size="sm" :to="{name:'users-id-delete',params:{id:row.item.id}}">
             <BIconTrash>{{ row.item.id }}</BIconTrash>
           </b-btn>
         </template>
@@ -54,7 +57,7 @@ export default Vue.extend({
           key: 'profile_photo_url',
           label: 'Profile'
         },
-        'username', 'email', 'user_group', 'last_visit', 'enabled',
+        'username', 'email', 'user_group', 'last_visit', 'enabled', 'activated',
         { key: 'actions', label: 'Actions' }]
     }
   },
