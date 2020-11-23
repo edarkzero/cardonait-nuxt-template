@@ -50,6 +50,16 @@ export const actions = {
       commit('setUser', userData.data)
     }
   },
+  async persistUser ({ commit }, data) {
+    const formData = new FormData()
+    for (const [key, value] of Object.entries(data)) {
+      formData.append(key, value)
+    }
+    const userData = await this.$api.$post('/api/users', formData)
+    if (typeof userData.data !== 'undefined') {
+      commit('setUser', userData.data)
+    }
+  },
   async modifyUser ({ commit }, payload) {
     const formData = new FormData()
     for (const [key, value] of Object.entries(payload.data)) {

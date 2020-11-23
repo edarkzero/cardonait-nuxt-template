@@ -1,10 +1,10 @@
 <template>
   <div class="container mt-4">
     <h5>Do you want to completely remove "{{ user.name }}" from the registers?</h5>
-    <b-button to="/">
+    <b-button to="/" variant="primary">
       No, leave it be and return to previous page
     </b-button>
-    <b-button @click="handleDestroy">
+    <b-button variant="danger" @click="handleDestroy">
       Yes, I want to and I'm responsible for that
     </b-button>
   </div>

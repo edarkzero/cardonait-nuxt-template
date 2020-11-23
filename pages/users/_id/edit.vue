@@ -67,22 +67,22 @@
         </b-form-checkbox>
       </b-form-group>
 
-      <b-form-file
-        v-model="form.profile_photo"
-        accept="image/jpeg, image/png"
-        :state="Boolean(form.profile_photo)"
-        placeholder="Choose a profile file or drop it here..."
-        drop-placeholder="Drop file here..."
-      >
-        <template slot="file-name" slot-scope="{ names }">
-          <b-badge variant="dark">
-            {{ names[0] }}
-          </b-badge>
-        </template>
-      </b-form-file>
-      <div class="mt-3">
-        Selected file: {{ form.profile_photo ? form.profile_photo.name : '' }}
-      </div>
+      <b-form-group label="Profile photo:" label-for="file-profile-photo" label-cols-sm="2">
+        <b-form-file
+          id="file-profile-photo"
+          v-model="form.profile_photo"
+          accept="image/jpeg, image/png"
+          :state="Boolean(form.profile_photo)"
+          placeholder="Choose a profile file or drop it here..."
+          drop-placeholder="Drop file here..."
+        >
+          <template slot="file-name" slot-scope="{ names }">
+            <b-badge variant="dark">
+              {{ names[0] }}
+            </b-badge>
+          </template>
+        </b-form-file>
+      </b-form-group>
 
       <b-button type="submit" variant="primary">
         Submit

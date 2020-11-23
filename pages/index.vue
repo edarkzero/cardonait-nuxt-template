@@ -25,7 +25,7 @@
           <b class="text-info">{{ data.value ? 'Yes' : 'No' }}</b>
         </template>
         <template v-slot:cell(profile_photo_url)="data">
-          <b-img :src="data.value" alt="Profile" height="40px" />
+          <b-img :src="data.value" alt="Profile" height="40px" width="40px" />
         </template>
         <template #cell(actions)="row">
           <b-btn size="sm" :to="{name:'users-id-edit',params:{id:row.item.id}}">
