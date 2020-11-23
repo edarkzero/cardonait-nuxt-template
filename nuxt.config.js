@@ -61,7 +61,6 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    '@nuxt/content',
     '@nuxtjs/sitemap'
   ],
   /*
