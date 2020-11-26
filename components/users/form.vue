@@ -72,6 +72,7 @@
           :state="Boolean(form.profile_photo)"
           placeholder="Choose a profile file or drop it here..."
           drop-placeholder="Drop file here..."
+          required
           @input="loadProfilePhoto"
         >
           <template slot="file-name" slot-scope="{ names }">
@@ -80,6 +81,7 @@
             </b-badge>
           </template>
         </b-form-file>
+        <span>Current photo</span>
         <b-img
           ref="bimg"
           fluid
@@ -148,7 +150,7 @@ export default {
   },
   methods: {
     loadProfilePhoto () {
-      /* if (this.form.profile_photo !== null) {
+      if (this.form.profile_photo !== null) {
         const reader = new FileReader()
         reader.onload = (() => {
           return (e) => {
@@ -156,11 +158,10 @@ export default {
           }
         })()
         reader.readAsDataURL(this.form.profile_photo)
-      } */
-      if (typeof this.user.profile_photo_url !== 'undefined') {
+      } else if (typeof this.user.profile_photo_url !== 'undefined') {
         this.preview_img = this.user.profile_photo_url
       } else {
-        this.preview_img = ''
+        this.preview_img = '/avatar.png'
       }
     },
     updateFields (user) {
