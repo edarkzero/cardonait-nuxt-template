@@ -22,13 +22,13 @@
     <b-alert
       :show="dismissCountDown"
       dismissible
-      variant="warning"
+      variant="info"
       @dismissed="dismissCountDown=0"
       @dismiss-count-down="countDownChanged"
     >
-      <p>Random alert!</p>
+      <p>{{ alertMessage }}</p>
       <b-progress
-        variant="warning"
+        variant="info"
         :max="dismissSecs"
         :value="dismissCountDown"
         height="4px"
@@ -38,13 +38,23 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
   name: 'Menu',
   data () {
     return {
       dismissSecs: 10,
-      dismissCountDown: 10,
-      showDismissibleAlert: false
+      dismissCountDown: 0
+    }
+  },
+  computed: {
+    ...mapGetters({
+      alertMessage: 'getAlertMessage'
+    })
+  },
+  watch: {
+    alertMessage () {
+      this.showAlert()
     }
   },
   methods: {
