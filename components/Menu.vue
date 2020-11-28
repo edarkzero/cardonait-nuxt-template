@@ -2,7 +2,7 @@
   <div>
     <b-navbar toggleable="lg" type="dark" variant="dark">
       <b-navbar-brand to="/">
-        CardonaIT
+        CardonaITTTT
       </b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse" />
