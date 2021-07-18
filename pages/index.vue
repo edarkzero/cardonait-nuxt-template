@@ -67,7 +67,7 @@ export default Vue.extend({
     })
   },
   created () {
-    this.fetchUsers()
+    //this.fetchUsers()
   },
   methods: {
     ...mapActions([

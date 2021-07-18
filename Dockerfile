@@ -14,4 +14,4 @@ FROM base as dev
 ENV NODE_ENV=development
 RUN npm install -g nuxt@2.13.0 && npm install
 COPY . .
-CMD ["npm","run", "start"]
+CMD ["npm","run", "dev"]
