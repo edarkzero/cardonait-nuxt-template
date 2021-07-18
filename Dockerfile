@@ -1,5 +1,6 @@
 FROM node:14-alpine as base
 ENV PORT=3000
+ENV HOST 0.0.0.0
 WORKDIR /app
 COPY package*.json ./
 EXPOSE 3000

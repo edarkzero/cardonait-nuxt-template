@@ -89,8 +89,5 @@ export default {
   },
   env: {
     gatewayURL: process.env.GATEWAY_URL || 'https://gateway-dev-dot-cardonait.uc.r.appspot.com'
-  },
-  server: {
-    host: '0.0.0.0' // default: localhost
   }
 }
