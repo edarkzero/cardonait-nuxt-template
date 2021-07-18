@@ -86,5 +86,8 @@ export default {
   },
   gtm: {
     id: 'GTM-MKSML52'
+  },
+  env: {
+    gatewayURL: process.env.GATEWAY_URL || 'https://gateway-dev-dot-cardonait.uc.r.appspot.com'
   }
 }

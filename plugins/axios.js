@@ -1,7 +1,7 @@
 export default async function ({ $axios, store }, inject) {
   // Create a custom axios instance
   const api = $axios.create()
-  const endpoint = 'https://gateway-dev-dot-cardonait.uc.r.appspot.com'
+  const endpoint = process.env.gatewayURL
 
   // Set baseURL to something different
   api.setBaseURL(endpoint)

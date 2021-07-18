@@ -28,10 +28,10 @@
           <b-img :src="data.value" alt="Profile" height="40px" width="40px" />
         </template>
         <template #cell(actions)="row">
-          <b-btn size="sm" :to="{name:'users-id-edit',params:{id:row.item.id}}">
+          <b-btn size="sm" :to="{name:'users-name-id-edit',params:{id:row.item.id,name:row.item.username}}">
             <BIconPencil>{{ row.item.id }}</BIconPencil>
           </b-btn>
-          <b-btn size="sm" :to="{name:'users-id-delete',params:{id:row.item.id}}">
+          <b-btn size="sm" :to="{name:'users-name-id-delete',params:{id:row.item.id,name:row.item.username}}">
             <BIconTrash>{{ row.item.id }}</BIconTrash>
           </b-btn>
         </template>
